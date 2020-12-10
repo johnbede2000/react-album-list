@@ -1,17 +1,41 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDom from 'react-dom';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+// CSS
+import './index.css';
+
+function ChetAlbums() {
+  return (
+    <section>
+      <p>Here are some of my favourite albums by Chet Baker:</p>
+      <div className="list">
+        <Album />
+        <Album />
+        <Album />
+        <Album />
+      </div>
+    </section>
+  );
+}
+
+const Album = () => {
+  return (
+    <article>
+      <Image />
+      <Title />
+      <Year />
+    </article>
+  );
+};
+
+const Image = () => (
+  <img
+    src="https://images-na.ssl-images-amazon.com/images/I/61wPRUL2vvL._AC_SL1200_.jpg"
+    alt=""
+  />
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+const Title = () => <h1>Chet Baker Sings</h1>;
+const Year = () => <h2>1955</h2>;
+
+ReactDom.render(<ChetAlbums />, document.getElementById('root'));
