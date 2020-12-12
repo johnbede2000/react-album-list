@@ -27,6 +27,13 @@ const albums = [
   },
 
   {
+    img:
+      'https://images-na.ssl-images-amazon.com/images/I/51saiXeXnRL._AC_.jpg',
+    title: 'The Best Thing For You',
+    year: '1984',
+  },
+
+  {
     title: 'Chet Baker In Tokyo',
     year: '1987',
     img:
