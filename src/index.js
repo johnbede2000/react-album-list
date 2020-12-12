@@ -6,6 +6,7 @@ import './index.css';
 
 const albums = [
   {
+    id: 0,
     title: 'Chet Baker Sings',
     year: '1955',
     img:
@@ -13,6 +14,7 @@ const albums = [
   },
 
   {
+    id: 1,
     title: 'It Could Happen To You',
     year: '1958',
     img:
@@ -20,6 +22,7 @@ const albums = [
   },
 
   {
+    id: 2,
     title: 'She Was Too Good To Me',
     year: '1974',
     img:
@@ -27,6 +30,7 @@ const albums = [
   },
 
   {
+    id: 3,
     img:
       'https://images-na.ssl-images-amazon.com/images/I/51saiXeXnRL._AC_.jpg',
     title: 'The Best Thing For You',
@@ -34,6 +38,7 @@ const albums = [
   },
 
   {
+    id: 4,
     title: 'Chet Baker In Tokyo',
     year: '1987',
     img:
@@ -47,20 +52,20 @@ function ChetAlbums() {
       <p>Here are some of my favourite albums by Chet Baker:</p>
       <div className="list">
         {albums.map((album) => {
-          return <Album album={album}></Album>;
+          return <Album key={album.id} {...album}></Album>;
         })}
       </div>
     </section>
   );
 }
 
-const Album = (props) => {
-  const { img, title, year } = props.album;
+const Album = ({ img, title, year }) => {
   return (
     <article className="album">
       <img src={img} alt="" />
       <h1>{title}</h1>
       <h2>{year}</h2>
+      <button type="button">Click Here</button>
     </article>
   );
 };
