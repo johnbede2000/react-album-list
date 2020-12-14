@@ -32,6 +32,9 @@ img {
   background: #fff;
   border-radius: 1rem;
   padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .album > * {
@@ -41,4 +44,8 @@ img {
 .album h2 {
   color: #617d98;
   font-size: 0.75rem;
+}
+
+.album img {
+  align-self: center;
 }
