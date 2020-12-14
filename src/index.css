@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+.page-container {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 5rem auto;
+}
+
 body {
   font-family: sans-serif;
   background-color: #f1f5f8;
@@ -11,9 +17,7 @@ body {
 }
 
 .list {
-  width: 90vw;
-  max-width: 1170px;
-  margin: 5rem auto;
+  margin-top: 2rem;
   display: grid;
   gap: 2rem;
 }

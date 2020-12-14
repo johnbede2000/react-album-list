@@ -7,7 +7,7 @@ import Album from './Album';
 
 function ChetAlbums() {
   return (
-    <section>
+    <section className="page-container">
       <p>Here are some of my favourite albums by Chet Baker:</p>
       <div className="list">
         {albums.map((album) => {
